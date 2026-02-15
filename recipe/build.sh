@@ -19,7 +19,7 @@ cargo-bundle-licenses --format yaml --output "${SRC_DIR}/THIRDPARTY.yml"
 
 # Build with maturin
 echo "Building Rust extension with maturin..."
-maturin build --release --features python --out dist
+maturin build --release --features python --out dist -i "${PYTHON}"
 
 # Install the wheel
 echo "Installing built wheel..."

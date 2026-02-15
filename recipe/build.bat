@@ -21,7 +21,7 @@ if errorlevel 1 (
 
 REM Build with maturin
 echo Building Rust extension with maturin...
-maturin build --release --features python --out dist
+maturin build --release --features python --out dist -i "%PYTHON%"
 if errorlevel 1 (
     echo Build failed!
     exit /b 1
